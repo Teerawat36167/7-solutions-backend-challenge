@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package beef;
+
+option go_package = "github.com/Teerawat36167/PieFireDire/internal/proto";
+
+service BeefService {
+    rpc CountBeef (BeefRequest) returns (BeefResponse) {}
+}
+
+message BeefRequest {}
+
+message BeefResponse {
+    map<string, int32> beef_counts = 1;
+}
